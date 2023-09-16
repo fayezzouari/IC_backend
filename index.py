@@ -5,7 +5,6 @@ import id_token
 import datetime
 import json
 from flask import Flask
-import main
 app = Flask(__name__)
 @app.route('/')
 
