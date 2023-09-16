@@ -13,6 +13,8 @@ def sorted_items(path):
     # Print the sorted data in a dictionary format
     sorted_dict = {key: value for key, value in sorted_data}
     print("sorted items")
-    print(sorted_dict)
+    # print(sorted_dict)
     return sorted_dict
 
+if __name__=='__main__':
+    sorted_items("values")

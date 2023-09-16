@@ -5,7 +5,7 @@ import datetime
 import json
 import id_token
 
-def send_latest_data():
+def get_latest_data():
     res=dict()
     res=sort_items.sorted_items("values")
     res_list=list(res)
@@ -19,7 +19,7 @@ def send_firebase():
     time=str(datetime.datetime.now())
     # Data you want to send in the POST request
     data = {
-        "Value": send_latest_data(),
+        "Value": get_latest_data(),
         "Id_user": id_user,
         "Timestamps": time,
     }

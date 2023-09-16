@@ -12,7 +12,7 @@ def trimming_num(text):
 
 
 # Load an image
-image = cv2.imread(r'C:\xampp\htdocs\Intelligent_counter\ai_project\dataset_train\counter_10.jpg')
+image = cv2.imread(r'C:\xampp\htdocs\Intelligent_counter\ai_project\dataset_train\counter_12.png')
 
 # Convert the image to grayscale (if needed)
 gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -37,10 +37,10 @@ sobel_edges = cv2.magnitude(sobel_x, sobel_y)
 gray = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
 ret, thresh = cv2.threshold(gray,0,255,cv2.THRESH_BINARY_INV+cv2.THRESH_OTSU)
 #write new files
-cv2.imwrite('blurred.jpg', thresh)
+cv2.imwrite('blurred.jpg', gray)
 
 
-filename = r"C:\xampp\htdocs\Intelligent_counter\ai_project\dataset_train\counter_5.jpg"
+filename = r"C:\xampp\htdocs\Intelligent_counter\ai_project\img.jpg"
 
 
 

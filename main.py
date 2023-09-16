@@ -4,6 +4,14 @@ import requests
 import id_token
 import datetime
 import json
+from flask import Flask
+import main
+app = Flask(__name__)
+@app.route('/')
+
+def index():
+    get_firebase_data()
+    return "Hello, World!"
 
 def get_firebase_data():
     url = "https://intelligentcounter-29709-default-rtdb.europe-west1.firebasedatabase.app/"
@@ -25,5 +33,6 @@ def get_firebase_data():
     else:
         print("nothing happens")
 
-while True:
-    get_firebase_data()
+
+if __name__ == '__main__':
+    app.run(debug=True)
